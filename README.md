@@ -13,10 +13,10 @@ The generateSchedule method is the bottleneck.
 If every test conflicts with every other, then the outer loop runs t times. 
 On the first iteration, the inner loop
 also runs t times, which means the intersection method gets called t times. Only the first of these calls takes O(1)
-time, the rest take O((s/t)*k) time, where (s/t)*k is the average number of students taking each test. 
+time, the rest take O( (s/t)*k ) time, where (s/t)*k is the average number of students taking each test. 
 On the next iteration of the outer loop the inner loop runs only t-1 times, calling the intersection method t-1 times. 
-Again all but one of these calls takes O((s/t)*k) time. So it follows that the worst case time is O(s/t*k( (t-1) + (t-2) +...+ 0) ).
-This reduces to O(s/t*k * (t-1)*t/2), which reduces to O(s*t).
+Again all but one of these calls takes O((s/t)*k) time. So it follows that the worst case time is O( (s/t)*k( (t-1) + (t-2) +...+ 0) ).
+This reduces to O((s/t) k (t-1)t/2), which reduces to O(st).
 
 
 Example output:
